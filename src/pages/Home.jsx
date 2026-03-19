@@ -8,7 +8,7 @@ const skills = [
   { label: "JavaScript", accent: false },
   { label: "SQL", accent: false },
   { label: "Figma", accent: false },
-  { label: "Product Strategy", accent: true },
+  { label: "Product Sense", accent: true },
   { label: "UX Research", accent: true },
   { label: "Agile", accent: true },
   { label: "Data Analytics", accent: true },
