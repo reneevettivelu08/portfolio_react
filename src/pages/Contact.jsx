@@ -39,7 +39,7 @@ export default function Contact() {
         <div>
           <p className="contact__eyebrow">// Let's connect</p>
           <h1 className="contact__title">
-            Open to new<br />opportunities
+            Open to new<br />opportunities!
           </h1>
         </div>
 
@@ -53,14 +53,14 @@ export default function Contact() {
             <div className="contact__detail-icon">@</div>
             <div>
               <div className="contact__detail-label">Email</div>
-              <div className="contact__detail-value">hello@renee.dev</div>
+              <div className="contact__detail-value">renee.vettivelu08@gmail.com</div>
             </div>
           </div>
           <div className="contact__detail-item">
             <div className="contact__detail-icon">⌖</div>
             <div>
               <div className="contact__detail-label">Location</div>
-              <div className="contact__detail-value">Toronto, ON — Remote friendly</div>
+              <div className="contact__detail-value">Toronto, ON - remote friendly! </div>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Contact() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/renee"
+              href="https://linkedin.com/in/renee-vettivelu/"
               className="contact__social-pill"
               target="_blank"
               rel="noreferrer"

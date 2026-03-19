@@ -5,16 +5,21 @@ const skills = [
   { label: "React", accent: false },
   { label: "Node.js", accent: false },
   { label: "Express", accent: false },
-  { label: "PostgreSQL", accent: false },
-  { label: "Product Strategy", accent: false },
-  { label: "UX Research", accent: false },
-  { label: "Agile", accent: false },
-  { label: "Claude AI", accent: true },
+  { label: "JavaScript", accent: false },
+  { label: "SQL", accent: false },
+  { label: "Figma", accent: false },
+  { label: "Product Strategy", accent: true },
+  { label: "UX Research", accent: true },
+  { label: "Agile", accent: true },
+  { label: "Data Analytics", accent: true },
+  { label: "Funnel Optimization", accent: true },
+  { label: "RAG Pipelines", accent: true }
 ];
 
 const experience = [
-  { company: "BMO Financial Group", role: "Product Manager — Digital Mortgages", date: "2022 — Present" },
-  { company: "BrainStation", role: "Software Engineering Diploma", date: "2024" },
+  { company: "BrainStation", role: "Software Engineering Diploma", date: "2026" },
+  { company: "BMO Financial Group - Product Manager", role: "Digital Home Financing & Personal Banking", date: "2025 — Present" },
+  { company: "BMO Financial Group - Technical Business Consultant", role: "Commercial Banking & Asset Management", date: "2020-2025" }
 ];
 
 export default function Home() {
@@ -27,12 +32,10 @@ export default function Home() {
           <p className="home__eyebrow">// Available for work</p>
           <h1 className="home__name">
             Product Manager<br />
-            <em>+ Developer</em>
+            <em>+ Software Engineer</em>
           </h1>
           <p className="home__tagline">
-            I combine product strategy with engineering execution to build
-            scalable digital experiences — pre-approvals, document workflows,
-            and data-driven interfaces.
+            Product Manager with a strategic lens. <br /> Engineer with a bias to build.
           </p>
           <div className="home__actions">
             <Link to="/projects" className="btn btn--primary">View Projects</Link>
@@ -53,12 +56,12 @@ export default function Home() {
                 github.com/reneevettivelu08
               </a>
               <a
-                href="https://linkedin.com/in/renee"
+                href="https://linkedin.com/in/renee-vettivelu"
                 className="home__social-link"
                 target="_blank"
                 rel="noreferrer"
               >
-                linkedin.com/in/renee
+                linkedin.com/in/renee-vettivelu
               </a>
             </div>
           </div>
@@ -82,16 +85,16 @@ export default function Home() {
       {/* ── Stats ── */}
       <div className="home__stats">
         <div className="home__stat">
-          <div className="home__stat-num">3+</div>
+          <div className="home__stat-num">10+</div>
           <div className="home__stat-label">Projects shipped</div>
         </div>
         <div className="home__stat">
-          <div className="home__stat-num">5yr</div>
+          <div className="home__stat-num">6 years</div>
           <div className="home__stat-label">Industry experience</div>
         </div>
         <div className="home__stat">
-          <div className="home__stat-num">2×</div>
-          <div className="home__stat-label">Disciplines</div>
+          <div className="home__stat-num">2x Eng Degrees</div>
+          <div className="home__stat-label">Education</div>
         </div>
       </div>
 
@@ -100,11 +103,7 @@ export default function Home() {
         <div className="home__about-label">// About me</div>
         <div className="home__about-content">
           <p>
-            I'm a product manager turned software engineer with a focus on
-            digital home financing experiences. I've led cross-functional teams
-            at BMO building mortgage pre-approval flows, and I write the code
-            too — so I understand both the "why" and the "how" of every
-            product decision.
+            I started in aerospace engineering, moved into product management, and now build software—bringing a rare mix of technical depth and product intuition. At BMO, I’ve led cross-functional teams designing mortgage pre-approval experiences, while also writing the code behind them. I approach every problem with a maker’s mindset and a strategic lens, focused on turning complex systems into simple, scalable digital experiences.
           </p>
         </div>
       </section>

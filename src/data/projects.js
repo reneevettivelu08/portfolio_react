@@ -1,11 +1,11 @@
 const projects = [
   {
     id: 1,
-    title: "The Odd Bunch",
+    title: "Odd Bunch ",
     description: "A grocery price comparison tool that helps Canadians find the lowest prices across major retailers — because paying full price for a sad pepper is a choice.",
     skills: ["React", "Node.js", "Express", "Claude AI"],
     featured: true,
-    type: "Full-Stack",
+    type: "Full-Stack", 
     github: [
       { label: "Frontend", url: "https://github.com/reneevettivelu08/groceryComp_react" },
       { label: "Backend", url: "https://github.com/reneevettivelu08/groceryComp_expres" }

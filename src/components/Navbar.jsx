@@ -8,10 +8,10 @@ export default function Navbar() {
 
   return (
     <nav className="nav">
-      <h2>Renee Vetivelu</h2>
+      <h2>Renee Vettivelu</h2>
       <div className="nav__inner">
         <Link to="/" className="nav__logo">
-          <span>//</span> renee.dev
+          <span>//</span> 
         </Link>
         <div className="nav__links">
           <Link
