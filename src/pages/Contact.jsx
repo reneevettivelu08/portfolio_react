@@ -90,9 +90,9 @@ export default function Contact() {
         <div className="contact__resume">
           <div>
             <div className="contact__resume-label">// Resume</div>
-            <div className="contact__resume-name">Renee_Vetivelu_Resume.pdf</div>
+            <div className="contact__resume-name">Renee_Vetivelu_Resume</div>
           </div>
-          <a href="/resume.pdf" download className="btn btn--primary">
+          <a href="../../public/Renee_Vettivelu_Resume.pdf" download className="btn btn--primary">
             Download ↓
           </a>
         </div>

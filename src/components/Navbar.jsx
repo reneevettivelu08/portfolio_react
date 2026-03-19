@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
+
 export default function Navbar() {
 
      const { pathname } = useLocation();
@@ -31,7 +32,7 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <a href="/resume.pdf" download className="nav__resume">
+          <a href="../../public/Renee_Vettivelu_Resume.pdf" download className="nav__resume">
             Resume ↓
           </a>
         </div>
