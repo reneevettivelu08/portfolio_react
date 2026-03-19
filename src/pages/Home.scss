@@ -1,0 +1,306 @@
+@use '../styles/variables' as *;
+
+.home {
+  animation: fadeUp 0.5s ease forwards;
+
+  // ─── Hero ───────────────────────────────────────────────────────
+  &__hero {
+    min-height: calc(100vh - 58px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 0.5px solid $border;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+      min-height: unset;
+    }
+  }
+
+  &__hero-left {
+    padding: $space-3xl $space-xl;
+    border-right: 0.5px solid $border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: $bp-md) {
+      padding: $space-2xl $space-md;
+      border-right: none;
+      border-bottom: 0.5px solid $border;
+    }
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $accent;
+    margin-bottom: $space-lg;
+  }
+
+  &__name {
+    font-family: $font-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: $text;
+    line-height: 1.05;
+    margin-bottom: $space-md;
+
+    em {
+      font-style: italic;
+      color: $accent;
+    }
+  }
+
+  &__tagline {
+    font-size: 0.875rem;
+    color: $text-muted;
+    line-height: 1.8;
+    max-width: 400px;
+    margin-bottom: $space-xl;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+  }
+
+  &__hero-right {
+    padding: $space-3xl $space-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $space-xl;
+
+    @media (max-width: $bp-md) {
+      padding: $space-xl $space-md;
+    }
+  }
+
+  &__avatar-row {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+  }
+
+  &__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: $bg-surface2;
+    border: 0.5px solid $border-mid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: $text-muted;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__social-link {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    transition: color $transition;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &::before {
+      content: '↗';
+      color: $accent;
+      font-size: 0.6875rem;
+    }
+
+    &:hover {
+      color: $text;
+    }
+  }
+
+  &__skills-block {
+    label {
+      display: block;
+      font-family: $font-mono;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: $text-muted;
+      margin-bottom: $space-sm;
+    }
+  }
+
+  &__skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+  }
+
+  // ─── Stats Row ──────────────────────────────────────────────────
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 0.5px solid $border;
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__stat {
+    padding: $space-lg $space-xl;
+    border-right: 0.5px solid $border;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @media (max-width: $bp-md) {
+      padding: $space-md;
+    }
+  }
+
+  &__stat-num {
+    font-family: $font-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-style: italic;
+    color: $text;
+  }
+
+  &__stat-label {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+    margin-top: 4px;
+  }
+
+  // ─── About Section ──────────────────────────────────────────────
+  &__about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 0.5px solid $border;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__about-label {
+    padding: $space-xl;
+    border-right: 0.5px solid $border;
+
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $text-muted;
+
+    @media (max-width: $bp-md) {
+      border-right: none;
+      border-bottom: 0.5px solid $border;
+      padding: $space-md;
+    }
+  }
+
+  &__about-content {
+    padding: $space-xl;
+
+    @media (max-width: $bp-md) {
+      padding: $space-md;
+    }
+
+    p {
+      font-size: 0.9375rem;
+      color: $text-muted;
+      line-height: 1.85;
+      max-width: 640px;
+    }
+  }
+
+  // ─── Experience Row ─────────────────────────────────────────────
+  &__experience {
+    border-bottom: 0.5px solid $border;
+  }
+
+  &__exp-header {
+    padding: $space-md $space-xl;
+    border-bottom: 0.5px solid $border;
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $text-muted;
+
+    @media (max-width: $bp-md) {
+      padding: $space-sm $space-md;
+    }
+  }
+
+  &__exp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $space-md $space-xl;
+    border-bottom: 0.5px solid $border;
+    transition: background $transition;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $bg-surface;
+    }
+
+    @media (max-width: $bp-md) {
+      padding: $space-md;
+    }
+
+    @media (max-width: $bp-sm) {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__exp-company {
+    font-size: 0.9375rem;
+    color: $text;
+  }
+
+  &__exp-role {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    margin-top: 3px;
+  }
+
+  &__exp-date {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    text-align: right;
+    white-space: nowrap;
+
+    @media (max-width: $bp-sm) {
+      text-align: left;
+      font-size: 0.6875rem;
+    }
+  }
+}

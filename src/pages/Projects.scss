@@ -1,0 +1,154 @@
+@use '../styles/variables' as *;
+
+.projects {
+  animation: fadeUp 0.5s ease forwards;
+
+  // ─── Header ─────────────────────────────────────────────────────
+  &__header {
+    padding: $space-xl $space-xl $space-md;
+    border-bottom: 0.5px solid $border;
+
+    @media (max-width: $bp-md) {
+      padding: $space-lg $space-md $space-sm;
+    }
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $accent;
+    margin-bottom: $space-sm;
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-style: italic;
+    color: $text;
+    line-height: 1.1;
+    margin-bottom: $space-sm;
+  }
+
+  &__subtitle {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    margin-bottom: $space-lg;
+  }
+
+  // ─── Filter Bar ─────────────────────────────────────────────────
+  &__filters {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+  }
+
+  &__filter {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 12px;
+    border: 0.5px solid $border-mid;
+    border-radius: $radius-sm;
+    color: $text-muted;
+    background: transparent;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover {
+      color: $text;
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--active {
+      color: $accent;
+      border-color: $accent-border;
+      background: $accent-bg;
+    }
+  }
+
+  // ─── Grid ───────────────────────────────────────────────────────
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-lg;
+    padding: $space-xl;
+
+    @media (max-width: $bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+      padding: $space-md;
+      gap: $space-md;
+    }
+  }
+
+  // Featured card spans full width
+  &__featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: $bg-surface;
+    border: 0.5px solid $accent-border;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: $accent;
+    }
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__featured-content {
+    padding: $space-xl;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+
+    @media (max-width: $bp-md) {
+      padding: $space-lg;
+    }
+  }
+
+  &__featured-visual {
+    background: $bg-surface2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-xl;
+    border-left: 0.5px solid $border;
+    min-height: 200px;
+
+    @media (max-width: $bp-md) {
+      display: none;
+    }
+  }
+
+  &__featured-placeholder {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: rgba(201, 100, 74, 0.4);
+    line-height: 1.6;
+    white-space: pre;
+  }
+
+  // ─── Empty State ────────────────────────────────────────────────
+  &__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: $space-3xl;
+    color: $text-muted;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+}

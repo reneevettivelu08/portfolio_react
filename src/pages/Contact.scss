@@ -1,0 +1,257 @@
+@use '../styles/variables' as *;
+
+.contact {
+  animation: fadeUp 0.5s ease forwards;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 58px);
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  // ─── Left Panel ─────────────────────────────────────────────────
+  &__info {
+    padding: $space-3xl $space-xl;
+    border-right: 0.5px solid $border;
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+
+    @media (max-width: $bp-md) {
+      padding: $space-xl $space-md;
+      border-right: none;
+      border-bottom: 0.5px solid $border;
+      gap: $space-lg;
+    }
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $accent;
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-style: italic;
+    color: $text;
+    line-height: 1.1;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    color: $text-muted;
+    line-height: 1.8;
+    max-width: 360px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-md;
+  }
+
+  &__detail-icon {
+    width: 32px;
+    height: 32px;
+    background: $bg-surface2;
+    border: 0.5px solid $border-mid;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: $text-muted;
+  }
+
+  &__detail-label {
+    font-family: $font-mono;
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+    margin-bottom: 3px;
+  }
+
+  &__detail-value {
+    font-size: 0.875rem;
+    color: $text;
+  }
+
+  &__socials-label {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+    margin-bottom: $space-sm;
+  }
+
+  &__socials {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+  }
+
+  &__social-pill {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border: 0.5px solid $border-mid;
+    border-radius: 40px;
+    color: $text-muted;
+    transition: all $transition;
+
+    &:hover {
+      color: $text;
+      border-color: rgba(255, 255, 255, 0.3);
+      background: $bg-surface;
+    }
+  }
+
+  &__resume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+    padding: $space-md;
+    background: $bg-surface2;
+    border: 0.5px solid $border-mid;
+    border-radius: $radius-md;
+  }
+
+  &__resume-label {
+    font-family: $font-mono;
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+    margin-bottom: 3px;
+  }
+
+  &__resume-name {
+    font-size: 0.8125rem;
+    color: $text;
+  }
+
+  // ─── Right Panel: Form ──────────────────────────────────────────
+  &__form-panel {
+    padding: $space-3xl $space-xl;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $bp-md) {
+      padding: $space-xl $space-md;
+    }
+  }
+
+  &__form-label {
+    font-family: $font-mono;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+    margin-bottom: $space-lg;
+  }
+}
+
+// ─── Form ──────────────────────────────────────────────────────────
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-md;
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__field-label {
+    font-family: $font-mono;
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $text-muted;
+  }
+
+  input,
+  textarea {
+    background: $bg-surface2;
+    border: 0.5px solid $border-mid;
+    border-radius: $radius-sm;
+    padding: 10px 14px;
+    font-family: $font-mono;
+    font-size: 0.8125rem;
+    color: $text;
+    transition: border-color $transition, background $transition;
+    width: 100%;
+    outline: none;
+
+    &::placeholder {
+      color: $text-faint;
+    }
+
+    &:focus {
+      border-color: rgba(201, 100, 74, 0.5);
+      background: $bg-surface;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.7;
+  }
+
+  &__submit {
+    margin-top: $space-sm;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+
+  &__status {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    padding: 10px 14px;
+    border-radius: $radius-sm;
+    text-align: center;
+
+    &--success {
+      background: rgba(99, 153, 34, 0.1);
+      color: #97c459;
+      border: 0.5px solid rgba(99, 153, 34, 0.25);
+    }
+
+    &--error {
+      background: rgba(226, 75, 74, 0.1);
+      color: #f09595;
+      border: 0.5px solid rgba(226, 75, 74, 0.25);
+    }
+  }
+}
