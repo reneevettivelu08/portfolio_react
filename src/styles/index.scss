@@ -1,0 +1,8 @@
+// ─── Entry Point ──────────────────────────────────────────────────
+// Import order matters: variables → base → everything else
+@use 'styles/variables' as *;
+@use 'styles/base';
+
+// Google Fonts — add to your index.html <head> instead if preferred:
+// <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+// Then update $font-serif in _variables.scss to: 'EB Garamond', Georgia, serif

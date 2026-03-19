@@ -1,0 +1,123 @@
+@use '../styles/variables' as *;
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 25, 23, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid $border;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-xl;
+
+  @media (max-width: $bp-md) {
+    padding: 0 $space-md;
+    height: 50px;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: $font-mono;
+    font-size: 0.875rem;
+    color: $text;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+
+    span {
+      color: $accent;
+    }
+
+    @media (max-width: $bp-sm) {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: $space-xl;
+
+    @media (max-width: $bp-md) {
+      gap: $space-lg;
+    }
+
+    @media (max-width: $bp-sm) {
+      gap: $space-md;
+    }
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $text-muted;
+    transition: color $transition;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: $accent;
+      transition: width $transition;
+    }
+
+    &:hover {
+      color: $text;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &--active {
+      color: $accent;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $bp-sm) {
+      font-size: 0.625rem;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &__resume {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $text-muted;
+    padding: 6px 14px;
+    border: 0.5px solid $border-mid;
+    border-radius: $radius-sm;
+    transition: all $transition;
+
+    &:hover {
+      color: $text;
+      border-color: rgba(255, 255, 255, 0.3);
+      background: $bg-surface;
+    }
+
+    @media (max-width: $bp-sm) {
+      display: none; // hide resume link on very small screens; accessible via home page
+    }
+  }
+}
